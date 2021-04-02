@@ -1,6 +1,6 @@
 # BMMP TKL ISO
 
-Glorious GMMK TKL ISO, but rewired to use a BlackPill!
+Glorious GMMK TKL ISO, but rewired to use a BlackPill - Black Modular Mechanical Pill
 
 Keyboard Maintainer: Paul_GD  
 Hardware Supported: BlackPill
