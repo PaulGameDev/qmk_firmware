@@ -16,5 +16,7 @@ MIDI_ENABLE = no            # MIDI support (+2400 to 4200, depending on config)
 UNICODE_ENABLE = no         # Unicode
 BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no           # Audio output on port C6
+RGB_MATRIX_ENABLE = yes		# GMMK I2C RGB matrix
+RGB_MATRIX_DRIVER = SLED1734X	# Possibly compatible I2C driver
 
 DEFAULT_FOLDER = handwired/bmmp_tkl_iso/blackpill_f411

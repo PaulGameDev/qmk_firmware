@@ -33,14 +33,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
+/* RGB Matrix */
+#define DRIVER_ADDR_1   0b11101110
+#define DRIVER_ADDR_2   0b11101000
+
+#define DRIVER_COUNT    2
+#define DRIVER_1_LED_TOTAL  63
+#define DRIVER_2_LED_TOTAL  25
+#define DRIVER_LED_TOTAL    (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE    5
 
-#define TAPPING_TERM 500
-/* Locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-// #define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-// #define LOCKING_RESYNC_ENABLE
+#define TAPPING_TERM    500
 
 /*
  * Feature disable options

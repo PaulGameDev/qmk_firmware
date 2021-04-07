@@ -241,7 +241,7 @@ ifeq ($(strip $(LED_MATRIX_ENABLE)), yes)
 endif
 
 RGB_MATRIX_ENABLE ?= no
-VALID_RGB_MATRIX_TYPES := IS31FL3731 IS31FL3733 IS31FL3737 IS31FL3741 WS2812 custom
+VALID_RGB_MATRIX_TYPES := IS31FL3731 IS31FL3733 IS31FL3737 IS31FL3741 WS2812 SLED1734X custom
 
 ifeq ($(strip $(RGB_MATRIX_ENABLE)), yes)
     ifeq ($(filter $(RGB_MATRIX_DRIVER),$(VALID_RGB_MATRIX_TYPES)),)
@@ -294,6 +294,13 @@ endif
     ifeq ($(strip $(RGB_MATRIX_DRIVER)), APA102)
         OPT_DEFS += -DAPA102
         APA102_DRIVER_REQUIRED := yes
+    endif
+
+	ifeq ($(strip $(RGB_MATRIX_DRIVER)), SLED1734X)
+        OPT_DEFS += -DSLED1734X -DSTM32_I2C -DHAL_USE_I2C=TRUE
+        COMMON_VPATH += $(DRIVER_PATH)/sonix
+        SRC += sled1734x.c
+        QUANTUM_LIB_SRC += i2c_master.c
     endif
 
     ifeq ($(strip $(RGB_MATRIX_CUSTOM_KB)), yes)
